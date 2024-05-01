@@ -2,9 +2,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // System.out.println("Bienvenidos a la inmersión en Java");
-        // System.out.println("Película Matrix");
-
         int fechaDeLanzamiento = 1999;
         double evaluacion = 4.5;
         boolean incluidoEnElPlanBasico = true;
@@ -33,7 +30,9 @@ public class Main {
             System.out.println("Película retro que vale la pena ver");
         }
 
-        for (int i = 0; i < 3; i++) {
+        int i = 0;
+
+        while (i < 3) {
             Scanner teclado = new Scanner(System.in);
             System.out.println(
                 "Ingresa la evaluación que le darías a "
@@ -42,6 +41,8 @@ public class Main {
             );
             double evaluacionUsuario = teclado.nextDouble();
             sumaEvaluacionesUsuarios += evaluacionUsuario;
+
+            i++;
         }
 
         promedioEvaluacionesUsuarios = sumaEvaluacionesUsuarios / 3;
